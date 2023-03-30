@@ -1,0 +1,172 @@
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    line-height: 53px;
+    font-weight: 600;
+    text-align: center;
+    color: theme('colors.black');
+}
+.section-description {
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: theme('colors.text-gray');
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: 80%;
+    
+}
+.get-stared, .left-panel, .right-panel {
+    /* height: 360px; */
+}
+.landing-carousel img {
+    height: 100%;
+    max-width: 100vw;
+}
+
+.experience-card .title {
+    font-size: 30px;
+}
+.experience-card .detail {
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    color: theme('colors.text-gray')
+}
+.experience-card .link {
+    margin-top: 16px;
+    font-size: 18px;
+    display: block;
+    text-decoration: underline;
+    cursor: pointer
+}
+.testvision .share_link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.leading .card {
+    padding: 88px 27px 42px 27px;
+    margin-bottom: 12px;
+    position: relative;
+}
+.leading .card img {
+    margin: 0 auto;
+    height: 75px;
+}
+.leading .card .title {
+    margin-top: 38px;
+    font: normal normal normal 30px/46px Poppins;
+    text-align: center;
+}
+.leading .card .detail {
+    margin-top: 11px;
+    text-align: center;
+    font: normal normal normal 20px/30px Poppins;
+}
+.leading button.btn-learn-more {
+    font-size: 18px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 13px 59px;
+}
+.leading button.btn-learn-more.bg-gray-500 {
+    --tw-bg-opacity: 1;
+    background-color: theme('colors.black-500');
+}
+.consult .consult-card {
+    padding: 20px 26px 23px 15px;
+    margin-right: 11px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.consult .consult-card > div:first-child {
+    height: 180px;
+}
+.consult .consult-card img {
+    width: 123px;
+    height: 123px;
+    border-radius: 5px;
+}
+.consult .consult-card .details {
+    margin-left: 13px
+}
+.consult .consult-card .details .name {
+    font-size: 25px;
+    line-height: 38px;
+    font-weight: 600;
+    color: theme('colors.primary');
+}
+.consult .consult-card .details .specialist {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 500;
+    color: theme('colors.black');
+    margin-top: 8px;
+}
+.consult .consult-card .details .role {
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 500;
+    color: theme('colors.text-gray');
+    margin-top: 8px;
+}
+.consult .consult-card .location {
+    font-size: 16px;
+    font-weight: 25px;
+    color: theme('colors.text-gray');
+    margin-top: 41px;
+    height: 48px;
+}
+.consult .consult-card .location span {
+    margin-left: 15px;
+}
+.consult .consult-card .btn-connect-consult {
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 27px;
+}
+.consult .consult-card .direction {
+    color: theme('colors.blue');
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+}
+.consult .load-more {
+    color: theme('colors.primary');
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+}
+.consult .load-more span {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.how-it-works  span.partner {
+    text-decoration: underline;
+    color: theme('colors.black');
+    font-size: 15px;
+    line-height: 23px;
+    margin-left: 12px;
+}
+.how-it-works .btn-become-partner {
+    font-size: 18px;
+    line-height: 27px;
+    padding: 13px 33px;
+}
+@media (max-width: 639px) {
+    .experience-card .title {
+        font-size: 22px;
+    }
+    .experience-card .link,
+    .experience-card .detail {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .consult-card {
+        width: 100%;
+    }
+}

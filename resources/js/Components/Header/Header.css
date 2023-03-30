@@ -1,0 +1,20 @@
+.top-header {
+    background-color: theme('colors.primary');
+    height: 48px;
+    font-size: 18px;
+}
+.top-header .social-btns a {
+    margin-bottom: 0;
+    background-color: theme('colors.white');
+    color: theme('colors.primary');
+}
+.service-contact p, .service-contact span {
+    font-size: 18px;
+    color: theme('colors.white-99')
+}
+.service-contact img {
+    width: 16.85px;
+    height: 16.85px;
+    /* margin-left: 12px;
+    margin-right: 8px; */
+}
