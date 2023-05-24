@@ -111,7 +111,7 @@ const EntityDetail = () => {
                         <div className="card entity-card">
                             <div className="card-title">
                                 <span className="hospital-icon header-icon">{hospitalIcon}</span>
-                                Entity Details
+                                ENTITY DETAILS
                             </div>
 
                             <div className="card-body">
@@ -157,9 +157,9 @@ const EntityDetail = () => {
                         </div>
                         <div className="card table-card">
                             <div className="card-title">
-                                <div className="left-title">MEMBER SHIP & BILLING</div>
+                                <div className="left-title">TESTS CONDUCTED BY ENTITY</div>
                                 <div className="right-title">
-                                    <p>View Billing History</p>
+                                    <p>View All</p>
                                     <span>{rightArrowIcon}</span>
                                 </div>
                             </div>
@@ -180,7 +180,7 @@ const EntityDetail = () => {
                         <div className="card admin-card">
                             <div className="card-title">
                                 <span className="header-icon">{userIcon}</span>
-                                Admin Details
+                                ADMIN DETAILS
                             </div>
                             <div className="card-body">
                                 <div className="grid-card-row">
@@ -209,7 +209,7 @@ const EntityDetail = () => {
                             <div className="card-title">
                                 <div className="left-title">
                                     <span className="lock-icon header-icon">{lockIcon}</span>
-                                    Account Security
+                                    ACCOUNT SECURITY
                                 </div>
                                 <div className="right-title">
                                     <Button title="Change Password" type="primary" />

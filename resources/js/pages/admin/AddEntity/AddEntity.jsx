@@ -26,7 +26,7 @@ const AddEntity = () => {
                         <div className="card first-card">
                             <div className="card-title">
                                 <span className="hospital-icon">{hospitalIcon}</span>
-                                Entity Details
+                                ENTITY DETAILS
                             </div>
 
                             <Select options={['Test']} placeHolder="Entity Type" />
@@ -37,7 +37,7 @@ const AddEntity = () => {
                         <div className="card second-card">
                             <div className="card-title">
                                 <span>{userIcon}</span>
-                                Assign Admin
+                                ASSIGN ADMIN
                             </div>
 
                             <div className="name-wrapper">
@@ -51,7 +51,7 @@ const AddEntity = () => {
                         <div className="card third-card">
                             <div className="card-title">
                                 <span>{imageIcon}</span>
-                                Upload Profile Image
+                                UPLOAD PROFILE IMAGE
                             </div>
 
                             <Dropzone />
@@ -59,7 +59,7 @@ const AddEntity = () => {
                         <div className="card fourth-card">
                             <div className="card-title">
                                 <span className="lock-icon">{lockIcon}</span>
-                                Account Security
+                                ACCOUNT SECURITY
                             </div>
 
                             <PasswordInput placeHolder="Enter Password" />
