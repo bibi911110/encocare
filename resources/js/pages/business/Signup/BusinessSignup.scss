@@ -1,0 +1,155 @@
+@import '../../../../sass/variables';
+@import '../../../../sass/mixins';
+
+.business-signup {
+    display: flex;
+    justify-content: center;
+    min-height: max(768px, calc(100vh - 111px));
+    background-color: #f6f6f7;
+
+    @include devices(tablet) {
+        background-color: #ffffff;
+        min-height: calc(100vh - 111px);
+    }
+
+    .signup-step-0 {
+        width: 420px;
+    }
+
+    .form-wrapper {
+        text-align: center;
+        padding: 69px 20px 0 20px;
+
+        @include devices(tablet) {
+            padding-top: 40px;
+        }
+
+        & > h1 {
+            font-size: 31px;
+            margin: 0;
+            color: $primaryColor;
+            padding-bottom: 20px;
+
+            @include devices(tablet) {
+                font-size: 20px;
+            }
+        }
+
+        & > p {
+            font-size: 16px;
+            padding-bottom: 20px;
+
+            @include devices(tablet) {
+                font-size: 14px;
+            }
+        }
+
+        .social-buttons {
+            button {
+                width: 100%;
+                margin-bottom: 12px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .step1-from {
+            margin-bottom: 20px;
+
+            .input-wrapper {
+                margin-bottom: 12px;
+
+                input {
+                    width: 100%;
+                    margin-bottom: 12px;
+                }
+            }
+
+            button {
+                width: 338px;
+
+                @include devices(tablet) {
+                    width: 288px;
+                    margin-top: max(0px, calc(100vh - 740px));
+                }
+            }
+        }
+
+        .step2-form {
+            .main-form {
+                display: flex;
+                gap: 30px;
+
+                @include devices(tablet) {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+
+                .input-wrapper {
+                    width: 420px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+
+                    @include devices(tablet) {
+                        width: 100%;
+                    }
+
+                    input {
+                        width: 100%;
+                    }
+                }
+
+                .dropzone {
+                    width: 420px;
+
+                    @include devices(tablet) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            button {
+                width: 337px;
+                margin-top: 54px;
+                margin-bottom: 36px;
+
+                @include devices(tablet) {
+                    margin-top: 36px;
+                    margin-bottom: 24px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .link-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 20px;
+
+            & > P {
+                font-size: 14px;
+            }
+
+            & > a {
+                font-size: 14px;
+                text-decoration: underline;
+                color: $primaryColor;
+            }
+        }
+
+        .policy {
+            color: #707070;
+            font-size: 12px;
+            letter-spacing: -0.5px;
+
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+}

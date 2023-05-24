@@ -1,25 +1,27 @@
 {
     "private": true,
+    "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build"
     },
     "devDependencies": {
-        "@headlessui/react": "^1.4.2",
-        "@inertiajs/react": "^1.0.0",
-        "@tailwindcss/forms": "^0.5.3",
-        "@vitejs/plugin-react": "^3.0.0",
-        "autoprefixer": "^10.4.12",
         "axios": "^1.1.2",
-        "laravel-vite-plugin": "^0.7.2",
-        "postcss": "^8.4.18",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "tailwindcss": "^3.2.1",
+        "laravel-vite-plugin": "^0.7.5",
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "@mui/icons-material": "^5.11.11",
-        "react-material-ui-carousel": "^3.4.2"
+        "@inertiajs/inertia-react": "^0.8.1",
+        "@inertiajs/react": "^1.0.7",
+        "@vitejs/plugin-react": "^4.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-dropzone": "^14.2.3",
+        "react-otp-input": "^3.0.2",
+        "react-qr-code": "^2.0.11",
+        "react-responsive-carousel": "^3.2.23",
+        "recharts": "^2.6.2",
+        "sass": "^1.62.1",
+        "sass-loader": "^13.3.0"
     }
 }

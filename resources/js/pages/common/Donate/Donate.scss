@@ -1,0 +1,179 @@
+@import '../../../../sass/variables';
+@import '../../../../sass/mixins';
+
+
+.donate {
+    display: flex;
+    justify-content: center;
+    min-height: max(768px, calc(100vh - 111px));
+
+    @include devices(tablet) {
+        min-height: calc(100vh - 111px);
+    }
+
+    .main-section {
+        width: 662px;
+        text-align: center;
+        margin-top: 69px;
+
+        @include devices(tablet) {
+            margin-top: 36px;
+            width: 100%;
+        }
+
+        & > h1 {
+            font-size: 27px;
+            font-weight: 100;
+            margin: 0;
+            color: $primaryColor;
+            padding-bottom: 20px;
+
+            @include devices(tablet) {
+                font-size: 20px;
+            }
+        }
+
+        & > p {
+            font-size: 16px;
+            padding: 0 20px 20px 20px;
+
+            @include devices(tablet) {
+                font-size: 14px;
+            }
+        }
+
+        .payment-wrapper {
+            background-color: #f6f6f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include devices(tablet) {
+                background-color: white;
+                padding: 0 20px;
+            }
+
+            .payment-main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 36px 20px 28px 20px;
+                width: 380px;
+                box-sizing: border-box;
+
+                @include devices(tablet) {
+                    background-color: #f6f6f7;
+                    width: 100%;
+                }
+
+                p {
+                    font-size: 19px;
+                    margin-bottom: 20px;
+
+                    @include devices(tablet) {
+                        font-size: 16px;
+                    }
+                }
+
+                .form-wrapper {
+                    width: 424px;
+
+                    @include devices(tablet) {
+                        width: 100%;
+                    }
+
+                    .payment-amount {
+                        display: flex;
+                        width: 100%;
+                        margin-bottom: 24px;
+
+                        .select-main {
+                            padding-left: 14px;
+                        }
+
+                        .select-option {
+                            padding-left: 14px;
+                        }
+
+                        .amount-input {
+                            flex: 1;
+                            width: 100%;
+                        }
+                    }
+
+                    .card-number-input {
+                        margin-bottom: 12px;
+                    }
+
+                    .date-picker-cvv {
+                        display: flex;
+                        gap: 12px;
+                        width: 100%;
+
+                        .date-input {
+                            // flex: 1;
+
+                            @include devices(tablet) {
+                                flex-basis: 50%;
+                                width: 50%;
+                            }
+                        }
+
+                        .cvv-input {
+                            width: 183px;
+
+                            @include devices(tablet) {
+                                flex-basis: 50%;
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .link-wrapper {
+                & > button {
+                    width: 264px;
+                    margin-bottom: 20px;
+
+                    @include devices(tablet) {
+                        width: 216px;
+                        margin-top: max(28px, calc(100vh - 768px));
+                    }
+                }
+
+                & > a {
+                    font-size: 14px;
+                    color: #000000;
+                    text-decoration: underline;
+                    display: block;
+                    margin-bottom: 24px;
+
+                    @include devices(tablet) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    .cost-type {
+        display: flex;
+        align-items: center;
+
+        .cost-type-icon {
+            width: 38px;
+            height: 25px;
+        }
+
+        .cost-type-title {
+            font-size: 16px;
+            margin-left: 12px;
+            margin-right: 18px;
+
+            @include devices(tablet) {
+                font-size: 14px;
+            }
+        }
+    }
+}

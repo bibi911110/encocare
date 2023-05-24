@@ -1,0 +1,12 @@
+header[data-layout='base'] {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+}
+
+main[data-layout='base'] {
+    margin-top: 111px;
+    min-height: calc(100vh - 111px);
+    box-sizing: border-box;
+}

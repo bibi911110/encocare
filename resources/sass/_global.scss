@@ -1,0 +1,69 @@
+.card {
+    background-color: #f6f6f6;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    box-sizing: border-box;
+}
+
+.text-green {
+    color: #01cd45;
+}
+
+.text-blue {
+    color: #0092bd;
+}
+
+.text-red {
+    color: #ff001a;
+}
+
+.text-yellow {
+    color: #ffaa00;
+}
+
+.table-text-primary {
+    font-size: 15px;
+    line-height: 15px;
+    color: #4d4d4d;
+
+    @include devices(tablet) {
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+.table-text-second {
+    font-size: 13px;
+    line-height: 15px;
+    color: #868686;
+
+    @include devices(tablet) {
+        font-size: 12px;
+        line-height: 13px;
+    }
+}
+
+.mobile-table-wrapper {
+    display: none;
+
+    @include devices(tablet) {
+        display: block;
+    }
+}
+
+.desktop-only {
+    display: inherit;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@include devices(tablet) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: inherit;
+    }
+}

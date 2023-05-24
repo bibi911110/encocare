@@ -1,0 +1,80 @@
+@import '../../../../sass/variables';
+@import '../../../../sass/mixins';
+
+.button {
+    position: relative;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    min-height: 45px;
+    cursor: pointer;
+
+    @include devices(tablet) {
+        font-size: 14px !important;
+    }
+
+    .button-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .button-arrow-icon {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            top: 0;
+            right: 10%;
+
+            svg {
+                transform: scale(0.9);
+            }
+        }
+
+        .button-icon {
+            display: flex;
+        }
+    }
+}
+
+.button-primary {
+    background-color: $primaryColor;
+    color: #ffffff;
+    box-shadow: 0 3px 6px 0 $boxShadowColor;
+}
+
+.button-danger {
+    background-color: #ff0000;
+    color: #ffffff;
+    box-shadow: 0 3px 6px 0 $boxShadowColor;
+}
+
+.button-green {
+    background-color: #00c770;
+    color: #ffffff;
+    box-shadow: 0 3px 6px 0 $boxShadowColor;
+}
+
+.button-outline {
+    background-color: #ffffff;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+}
+
+.button-light {
+    background-color: #00000000;
+    color: #303030;
+}
+
+.button-gray {
+    background-color: #42474d;
+    color: #ffffff;
+    box-shadow: 0 3px 6px 0 $boxShadowColor;
+}
+
+.button-link {
+    background-color: #00000000;
+    color: #ffffff;
+    text-decoration: underline;
+}
