@@ -15,7 +15,7 @@ const AddDoctor = () => {
                     <h1>
                         <span>{leftArrowIcon2}</span>Add an Doctor
                     </h1>
-                    <p>An an doctor to add in your dashboard!</p>
+                    <p>Corporate Admin can add a doctor.</p>
                 </div>
 
                 <div className="main-content">

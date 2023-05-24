@@ -112,7 +112,7 @@ const HospitalDetail = () => {
                         <div className="card hospital-card">
                             <div className="card-title">
                                 <span className="header-icon hospital-icon">{hospitalIcon}</span>
-                                Hospital Details
+                                HOSPITAL DETAILS
                             </div>
 
                             <div className="card-body">
@@ -155,7 +155,7 @@ const HospitalDetail = () => {
                         </div>
                         <div className="card table-card">
                             <div className="card-title">
-                                <div className="left-title">TESTS Conducted BY HOSPITAL</div>
+                                <div className="left-title">TESTS CONDUCTED BY HOSPITAL</div>
                                 <div className="right-title">
                                     <p>View Billing History</p>
                                     <span>{rightArrowIcon}</span>

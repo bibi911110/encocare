@@ -15,7 +15,7 @@ const AddHospital = () => {
                     <h1>
                         <span>{leftArrowIcon2}</span>Add an Hospital
                     </h1>
-                    <p>An an hospital to add in your dashboard!</p>
+                    <p>Super Admin can add hospital here and manage login credentials for hospital admins.</p>
                 </div>
 
                 <div className="main-content">
@@ -23,7 +23,7 @@ const AddHospital = () => {
                         <div className="card first-card">
                             <div className="card-title">
                                 <span className="hospital-icon">{hospitalIcon}</span>
-                                Hospital Details
+                                HOSPITAL DETAILS
                             </div>
 
                             <NormalInput placeHolder="Hospital name" />
@@ -33,7 +33,7 @@ const AddHospital = () => {
                         <div className="card second-card">
                             <div className="card-title">
                                 <span>{userIcon}</span>
-                                Hospital Admin
+                                HOSPITAL ADMIN
                             </div>
 
                             <div className="name-wrapper">
@@ -46,7 +46,7 @@ const AddHospital = () => {
                         <div className="card third-card">
                             <div className="card-title">
                                 <span>{imageIcon}</span>
-                                Upload Profile Image
+                                UPLOAD PROFILE IMAGE
                             </div>
 
                             <Dropzone />
