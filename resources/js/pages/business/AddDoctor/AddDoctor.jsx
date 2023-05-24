@@ -23,7 +23,7 @@ const AddDoctor = () => {
                         <div className="card first-card">
                             <div className="card-title">
                                 <span className="doctor-icon">{doctorIcon}</span>
-                                Doctor Details
+                                DOCTOR DETAILS
                             </div>
 
                             <NormalInput placeHolder="Doctor name" />
@@ -33,7 +33,7 @@ const AddDoctor = () => {
                         <div className="card second-card">
                             <div className="card-title">
                                 <span>{userIcon}</span>
-                                Doctor Admin
+                                DOCTOR ADMIN
                             </div>
 
                             <div className="name-wrapper">
@@ -46,7 +46,7 @@ const AddDoctor = () => {
                         <div className="card third-card">
                             <div className="card-title">
                                 <span>{imageIcon}</span>
-                                Upload Profile Image
+                                UPLOAD PROFILE IMAGE
                             </div>
 
                             <Dropzone />

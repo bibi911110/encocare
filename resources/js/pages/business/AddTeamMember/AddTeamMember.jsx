@@ -34,7 +34,7 @@ const AddTeamMember = () => {
                     <h1>
                         <span>{leftArrowIcon2}</span>Add an TeamMember
                     </h1>
-                    <p>An an team-member to add in your dashboard!</p>
+                    <p>Admin can add and assign roles to medical team members here!</p>
                 </div>
 
                 <div className="main-content">

@@ -19,7 +19,7 @@ const IndividualSecuritySetting = () => {
                     <div className="card left-card">
                         <div className="card-title">
                             <span className="hospital-icon">{lockIcon}</span>
-                            Security Settings
+                            CHANGE PASSWORD
                         </div>
                         <div className="card-body">
                             <div className="input-wrapper">
