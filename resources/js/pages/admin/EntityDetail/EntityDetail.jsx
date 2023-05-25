@@ -1,4 +1,5 @@
 import AdminLayout from '@/layout/AdminLayout/AdminLayout';
+import { Link } from '@inertiajs/react';
 import Button from '@/components/common/Button/Button';
 import CheckBox from '@/components/common/CheckBox/CheckBox';
 import Table from '@/components/common/Table/Table';
@@ -56,7 +57,7 @@ const rows = source.map((item) => {
                 <p className="table-text-second">{item.address}</p>
             </div>
         ),
-        test: <span className="entity-test">{item.test}</span>,
+        test: <Link className="entity-test">{item.test}</Link>,
         action: (
             <div className="entity-action">
                 <span>{downloadIcon}</span>
@@ -159,7 +160,7 @@ const EntityDetail = () => {
                             <div className="card-title">
                                 <div className="left-title">TESTS CONDUCTED BY ENTITY</div>
                                 <div className="right-title">
-                                    <p>View All</p>
+                                    <Link href="/admin/entity/detail/1/test-result">View All</Link>
                                     <span>{rightArrowIcon}</span>
                                 </div>
                             </div>

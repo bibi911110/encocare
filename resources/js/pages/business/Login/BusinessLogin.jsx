@@ -1,4 +1,4 @@
-import { Link } from '@inertiajs/react';
+import { Link, router } from '@inertiajs/react';
 import BasicLayout from '@/layout/BasicLayout/BasicLayout';
 import Button from '@/components/common/Button/Button';
 import CheckBox from '@/components/common/CheckBox/CheckBox';
@@ -8,6 +8,10 @@ import { rightArrowIcon2 } from '@/components/icons/common';
 import './BusinessLogin.scss';
 
 const BusinessLogin = () => {
+    const handleLogin = () => {
+        router.get('/business/dashboard');
+    };
+
     return (
         <BasicLayout>
             <div className="business-login">
@@ -24,9 +28,9 @@ const BusinessLogin = () => {
                                     <CheckBox />
                                     <span>Remember me</span>
                                 </div>
-                                <Link href="/">Forgot Password?</Link>
+                                <Link href="/forget-password">Forgot Password?</Link>
                             </div>
-                            <Button title="Login" type="primary" arrow />
+                            <Button title="Login" type="primary" onClick={handleLogin} arrow />
                         </form>
 
                         <div className="link-wrapper">

@@ -225,6 +225,11 @@
                     align-items: center;
                     justify-content: center;
 
+                    & > a {
+                        display: flex;
+                        align-items: center;
+                    }
+
                     & > span {
                         display: flex;
                         align-items: center;

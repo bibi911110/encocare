@@ -1,15 +1,19 @@
-import { Link } from '@inertiajs/react';
+import { Link, router } from '@inertiajs/react';
+import BasicLayout from '@/layout/BasicLayout/BasicLayout';
 import Button from '@/components/common/Button/Button';
 import CheckBox from '@/components/common/CheckBox/CheckBox';
 import NormalInput from '@/components/common/NormalInput/NormalInput';
 import PasswordInput from '@/components/common/PasswordInput/PasswordInput';
 import { rightArrowIcon2 } from '@/components/icons/common';
 import './IndividualLogin.scss';
-import IndividualLayout from '@/layout/IndividualLayout/IndividualLayout';
 
 const IndividualLogin = () => {
+    const handleLogin = () => {
+        router.get('/individual/dashboard');
+    };
+
     return (
-        <IndividualLayout>
+        <BasicLayout>
             <div className="individual-login">
                 <div className="main-section">
                     <div className="left-section">
@@ -26,7 +30,7 @@ const IndividualLogin = () => {
                                 </div>
                                 <Link href="/">Forgot Password?</Link>
                             </div>
-                            <Button title="Login" type="primary" arrow />
+                            <Button title="Login" type="primary" onClick={handleLogin} arrow />
                         </form>
                     </div>
                     <div className="right-section">
@@ -57,7 +61,7 @@ const IndividualLogin = () => {
                     </div>
                 </div>
             </div>
-        </IndividualLayout>
+        </BasicLayout>
     );
 };
 

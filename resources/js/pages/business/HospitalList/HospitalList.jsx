@@ -7,6 +7,7 @@ import { crossCircleIcon, eyeIcon, filterIcon, leftArrowIcon2 } from '@/componen
 import { plusCircleIcon } from '@/components/icons/sidebar';
 import hospitalImage from '../../../../images/hospital.png';
 import './HospitalList.scss';
+import { Link } from '@inertiajs/react';
 
 const columns = [
     {
@@ -79,7 +80,7 @@ const rows = source.map((item) => {
         date: item.date,
         action: (
             <div className="hospital-action">
-                <span>{eyeIcon}</span>
+                <Link href="/business/hospital/detail/1">{eyeIcon}</Link>
                 <div className="vertical-divider" />
                 <span>{crossCircleIcon}</span>
             </div>
@@ -129,12 +130,16 @@ const HospitalList = () => {
                     <div>
                         <span>{leftArrowIcon2}</span>Hospital
                     </div>
-                    <Button title="&nbsp;&nbsp;Add Hospital" type="primary" icon={plusCircleIcon} />
+                    <Link href="/business/hospital/add">
+                        <Button title="&nbsp;&nbsp;Add Hospital" type="primary" icon={plusCircleIcon} />
+                    </Link>
                 </div>
                 <div className="card">
                     <div className="search-wrapper">
                         <SearchInput placeHolder="Search for a hospital ID/Name etc" />
-                        <Button title="&nbsp;&nbsp;Add Hospital" type="primary" icon={plusCircleIcon} />
+                        <Link href="/business/hospital/add">
+                            <Button title="&nbsp;&nbsp;Add Hospital" type="primary" icon={plusCircleIcon} />
+                        </Link>
                         <span className="mobile-filter">{filterIcon}</span>
                     </div>
                     <div className="filter-wrapper">

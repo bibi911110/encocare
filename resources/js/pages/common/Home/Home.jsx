@@ -159,7 +159,9 @@ const Home = () => {
                                 <span>I agree to the terms and conditions.</span>
                             </div>
                             <div className="button-wrapper">
-                                <Button title="Start the Test" type="primary" arrow />
+                                <Link href="/test/agree">
+                                    <Button title="Start the Test" type="primary" arrow />
+                                </Link>
                             </div>
                             <div className="copy-wrapper">
                                 {copyIcon}

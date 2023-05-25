@@ -1,3 +1,4 @@
+import { router } from '@inertiajs/react';
 import ProfileLayout from '@/layout/ProfileLayout/ProfileLayout';
 import Button from '@/components/common/Button/Button';
 import SearchInput from '@/components/common/SearchInput/SearchInput';
@@ -16,6 +17,10 @@ const data = {
 };
 
 const Dashboard = () => {
+    const handleTakeTest = () => {
+        router.get('/test/agree');
+    };
+
     return (
         <ProfileLayout>
             <div className="profile-dashboard">
@@ -24,7 +29,7 @@ const Dashboard = () => {
                         <h1>Welcome to Encocare</h1>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing </p>
                     </div>
-                    <Button title="Take a Test" type="primary" />
+                    <Button title="Take a Test" type="primary" onClick={handleTakeTest} />
                 </div>
 
                 <div className="dashboard-content">

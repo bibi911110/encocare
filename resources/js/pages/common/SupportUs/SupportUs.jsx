@@ -1,4 +1,4 @@
-import { Link } from '@inertiajs/react';
+import { Link, router } from '@inertiajs/react';
 import BasicLayout from '@/layout/BasicLayout/BasicLayout';
 import Button from '@/components/common/Button/Button';
 import SocialButton from '@/components/common/SocialButton/SocialButton';
@@ -6,6 +6,10 @@ import logoEyeImage from '../../../../images/logo-eye.png';
 import './SupportUs.scss';
 
 const SupportUs = () => {
+    const handleDonate = () => {
+        router.get('/donate');
+    };
+
     return (
         <BasicLayout>
             <div className="support-us">
@@ -20,7 +24,14 @@ const SupportUs = () => {
                             We aim to cure and relieve 200,000 patients including pregnant women,kids and babies. Help
                             us in achieving our mission.
                         </p>
-                        <Button className="donate-button" title="Donate for a better vision" type="primary" arrow />
+
+                        <Button
+                            className="donate-button"
+                            title="Donate for a better vision"
+                            type="primary"
+                            arrow
+                            onClick={handleDonate}
+                        />
 
                         <h2>Join our support group</h2>
                         <p>

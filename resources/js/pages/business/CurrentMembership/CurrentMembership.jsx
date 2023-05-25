@@ -1,3 +1,4 @@
+import { router } from '@inertiajs/react';
 import BusinessLayout from '@/layout/BusinessLayout/BusinessLayout';
 import Button from '@/components/common/Button/Button';
 import cardImage from '../../../../images/payments/card2.png';
@@ -6,6 +7,10 @@ import { plusCircleIcon } from '@/components/icons/sidebar';
 import './CurrentMembership.scss';
 
 const CurrentMembership = () => {
+    const handleMembershipList = () => {
+        router.get('/business/membership/list');
+    };
+
     return (
         <BusinessLayout>
             <div className="current-membership">
@@ -65,12 +70,12 @@ const CurrentMembership = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="mobile-subscribe-button">
+                                        <div className="mobile-subscribe-button" onClick={handleMembershipList}>
                                             <span>Upgrade</span>
                                         </div>
                                     </div>
                                     <div className="button-wrapper">
-                                        <Button title="Upgrade" type="green" />
+                                        <Button title="Upgrade" type="green" onClick={handleMembershipList} />
                                         <p>Cancel Membership</p>
                                     </div>
                                     <p className="mobile-support-link">

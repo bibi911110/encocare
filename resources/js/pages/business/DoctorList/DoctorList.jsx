@@ -1,3 +1,4 @@
+import { Link } from '@inertiajs/react';
 import BusinessLayout from '@/layout/BusinessLayout/BusinessLayout';
 import Button from '@/components/common/Button/Button';
 import SearchInput from '@/components/common/SearchInput/SearchInput';
@@ -78,7 +79,7 @@ const rows = source.map((item) => {
         date: item.date,
         action: (
             <div className="doctor-action">
-                <span>{eyeIcon}</span>
+                <Link href="/business/doctor/detail/1">{eyeIcon}</Link>
                 <div className="vertical-divider" />
                 <span>{crossCircleIcon}</span>
             </div>
@@ -135,7 +136,9 @@ const DoctorList = () => {
                         </h1>
                         <p>All doctors onboard by the corporate admin will be shown here</p>
                     </div>
-                    <Button title="&nbsp;&nbsp;Add Doctor" type="primary" icon={plusCircleIcon} />
+                    <Link href="/business/doctor/add">
+                        <Button title="&nbsp;&nbsp;Add Doctor" type="primary" icon={plusCircleIcon} />
+                    </Link>
                 </div>
                 <div className="card">
                     <div className="search-wrapper">

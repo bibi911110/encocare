@@ -1,4 +1,4 @@
-import { Link } from '@inertiajs/react';
+import { Link, router } from '@inertiajs/react';
 import Button from '@/components/common/Button/Button';
 import Select from '@/components/common/Select/Select';
 import NormalInput from '@/components/common/NormalInput/NormalInput';
@@ -13,7 +13,11 @@ const selectOptions = [
     </div>,
 ];
 
-const PaymentStep2 = ({ handlePrevStep }) => {
+const PaymentStep2 = () => {
+    const handleThanks = () => {
+        router.get('/thanks');
+    };
+
     return (
         <>
             <div className="payment-main">
@@ -32,7 +36,7 @@ const PaymentStep2 = ({ handlePrevStep }) => {
                 </div>
             </div>
             <div className="link-wrapper">
-                <Button title="Pay Now" type="primary" onClick={handlePrevStep} arrow />
+                <Button title="Pay Now" type="primary" onClick={handleThanks} arrow />
                 <br />
                 <Link href="/">Back</Link>
             </div>

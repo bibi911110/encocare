@@ -1,4 +1,4 @@
-import { Link } from '@inertiajs/react';
+import { Link, router } from '@inertiajs/react';
 import BasicLayout from '@/layout/BasicLayout/BasicLayout';
 import Button from '@/components/common/Button/Button';
 import SocialButton from '@/components/common/SocialButton/SocialButton';
@@ -9,6 +9,10 @@ import CheckBox from '@/components/common/CheckBox/CheckBox';
 import './Login.scss';
 
 const Login = () => {
+    const handleLogin = () => {
+        router.get('/profile/dashboard');
+    };
+
     return (
         <BasicLayout>
             <div className="login">
@@ -34,7 +38,7 @@ const Login = () => {
                                     <Link href="/forget-password">Forgot Password?</Link>
                                 </div>
                             </div>
-                            <Button title="Login" type="primary" arrow />
+                            <Button title="Login" type="primary" onClick={handleLogin} arrow />
                         </form>
                         <div className="link-wrapper">
                             <p>Not a member?</p>

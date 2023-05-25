@@ -1,5 +1,5 @@
 import { Fragment, useState } from 'react';
-import { Link } from '@inertiajs/react';
+import { Link, usePage } from '@inertiajs/react';
 import {
     sidebarToggleIcon,
     blockIcon,
@@ -227,11 +227,6 @@ const businessLinks = [
         title: 'MEDICAL TEAM',
         children: [
             {
-                title: 'All Medical team',
-                icon: userIcon,
-                link: '/business/member',
-            },
-            {
                 title: 'Add a team member',
                 icon: plusCircleIcon,
                 link: '/business/member/add',
@@ -278,6 +273,8 @@ const businessLinks = [
 const Sidebar = ({ type }) => {
     const [isMobileOpen, setMobileOpen] = useState(false);
 
+    const { url } = usePage();
+
     let linkData = adminLinks;
 
     if (type == 'admin') {
@@ -300,17 +297,21 @@ const Sidebar = ({ type }) => {
                         <Fragment key={item.title}>
                             {item.title === 'SETTINGS' && <div className="divider" />}
                             <li className="parent">{item.title}</li>
-                            {item.children.map((child) => (
-                                <li className="child" key={child.title}>
-                                    <Link href={child.link}>
-                                        <div>
-                                            <span className="child-icon">{child.icon}</span>
-                                            <span className="child-title">{child.title}</span>
-                                        </div>
-                                        <span>{rightArrowIcon}</span>
-                                    </Link>
-                                </li>
-                            ))}
+                            {item.children.map((child) => {
+                                const linkClassName = url === child.link ? 'active' : '';
+
+                                return (
+                                    <li className="child" key={child.title}>
+                                        <Link href={child.link} className={linkClassName}>
+                                            <div>
+                                                <span className="child-icon">{child.icon}</span>
+                                                <span className="child-title">{child.title}</span>
+                                            </div>
+                                            <span>{rightArrowIcon}</span>
+                                        </Link>
+                                    </li>
+                                );
+                            })}
                         </Fragment>
                     ))}
                 </ul>

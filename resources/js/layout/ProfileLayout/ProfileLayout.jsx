@@ -5,9 +5,6 @@ import BottomDialog from '../../components/common/BottomDialog/BottomDialog';
 import './ProfileLayout.scss';
 
 const ProfileLayout = ({ children }) => {
-    const currentUrl = window.location.href;
-    const isTestHistory = currentUrl.indexOf('/profile/test-history') > -1;
-
     return (
         <>
             <header data-layout="profile">
@@ -15,7 +12,7 @@ const ProfileLayout = ({ children }) => {
                 <Navbar mode="user" />
             </header>
             <main data-layout="profile">
-                <Profile isTestHistory={isTestHistory} />
+                <Profile />
                 <div className="main-content">{children}</div>
             </main>
             <BottomDialog />

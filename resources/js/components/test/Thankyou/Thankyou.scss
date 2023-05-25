@@ -59,8 +59,7 @@
         box-sizing: border-box;
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 54px;
+        justify-content: space-between;
         margin-bottom: 16px;
 
         @include devices(desktop) {

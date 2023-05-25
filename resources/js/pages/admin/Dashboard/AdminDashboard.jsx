@@ -1,3 +1,4 @@
+import { Link } from '@inertiajs/react';
 import { AreaChart, Area, Tooltip, ResponsiveContainer } from 'recharts';
 import Button from '@/components/common/Button/Button';
 import Table from '@/components/common/Table/Table';
@@ -141,7 +142,9 @@ const AdminDashboard = () => {
         <AdminLayout>
             <div className="admin-dashboard">
                 <div className="main-header">
-                    <Button title="&nbsp;&nbsp;Add Entity" type="primary" icon={plusCircleIcon} />
+                    <Link href="/admin/entity/add">
+                        <Button title="&nbsp;&nbsp;Add Entity" type="primary" icon={plusCircleIcon} />
+                    </Link>
                 </div>
                 <div className="main-section">
                     <div className="left-section">

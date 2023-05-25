@@ -1,3 +1,4 @@
+import { Link } from '@inertiajs/react';
 import Button from '@/components/common/Button/Button';
 import SearchInput from '@/components/common/SearchInput/SearchInput';
 import CheckBox from '@/components/common/CheckBox/CheckBox';
@@ -76,7 +77,7 @@ const rows = source.map((item) => {
         date: item.date,
         action: (
             <div className="entity-action">
-                <span>{eyeIcon}</span>
+                <Link href="/admin/entity/detail/1">{eyeIcon}</Link>
                 <div className="vertical-divider" />
                 <span>{crossCircleIcon}</span>
             </div>
@@ -130,12 +131,16 @@ const EntityList = () => {
                     <div>
                         <span>{leftArrowIcon2}</span>Your Entities
                     </div>
-                    <Button title="&nbsp;&nbsp;Add Entity" type="primary" icon={plusCircleIcon} />
+                    <Link href="/admin/entity/add">
+                        <Button title="&nbsp;&nbsp;Add Entity" type="primary" icon={plusCircleIcon} />
+                    </Link>
                 </div>
                 <div className="card">
                     <div className="search-wrapper">
                         <SearchInput placeHolder="Search for a entity ID/Name etc" />
-                        <Button title="&nbsp;&nbsp;Add Entity" type="primary" icon={plusCircleIcon} />
+                        <Link href="/admin/entity/add">
+                            <Button title="&nbsp;&nbsp;Add Entity" type="primary" icon={plusCircleIcon} />
+                        </Link>
                         <span className="mobile-filter">{filterIcon}</span>
                     </div>
                     <div className="filter-wrapper">

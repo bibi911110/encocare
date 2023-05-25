@@ -80,7 +80,7 @@ const AddEntity = () => {
 
                     <div className="button-wrapper">
                         <Button title="Save" type="primary" />
-                        <Link href="/">{leftArrowIcon2} Back</Link>
+                        <Link href="/admin/dashboard">{leftArrowIcon2} Back</Link>
                     </div>
                 </div>
             </div>
