@@ -9,7 +9,7 @@ import logoImage from '../../../../images/logo.png';
 import './Navbar.scss';
 
 const links = [
-    { title: 'Take Test', link: '/take-test' },
+    { title: 'Take Test', link: '/test/agree' },
     {
         title: 'Our Services',
         subLinks: [

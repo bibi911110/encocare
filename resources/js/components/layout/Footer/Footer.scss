@@ -61,15 +61,15 @@ footer {
     .subscribe-section {
         display: flex;
         justify-content: space-between;
-        padding: 40px 234px 28px 234px;
+        padding: 40px 234px 54px 234px;
         gap: 22px;
 
         @include devices(display) {
-            padding: 40px 144px 28px 144px;
+            padding: 40px 144px 54px 144px;
         }
 
         @include devices(desktop) {
-            padding: 40px 90px 28px 90px;
+            padding: 40px 90px 54px 90px;
         }
 
         @include devices(tablet) {
