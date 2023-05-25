@@ -49,6 +49,7 @@
                 margin: 0;
                 padding: 24px 18px 2px 18px;
                 background-color: #f6f6f6;
+                gap: 0;
             }
 
             .search-input {
@@ -61,7 +62,7 @@
                 }
             }
 
-            & > button {
+            & > a > button {
                 height: 51px;
                 width: 174px;
 

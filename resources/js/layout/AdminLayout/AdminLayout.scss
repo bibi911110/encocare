@@ -9,7 +9,7 @@ header[data-layout='admin'] {
 
 main[data-layout='admin'] {
     display: flex;
-    min-height: calc(100vh - 111px);
+    height: calc(100vh - 111px);
     margin-top: 111px;
     position: relative;
 
@@ -17,7 +17,7 @@ main[data-layout='admin'] {
         flex: 1;
         box-sizing: border-box;
         padding: 24px 32px;
-        height: calc(100vh - 111px);
+        height: 100%;
         overflow: auto;
 
         @include devices(tablet) {

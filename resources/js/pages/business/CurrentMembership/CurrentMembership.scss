@@ -369,7 +369,7 @@
                         }
 
                         .method-card-list {
-                            height: calc(100vh - 386px);
+                            height: calc(100vh - 396px);
                             overflow: auto;
 
                             @include devices(tablet) {
