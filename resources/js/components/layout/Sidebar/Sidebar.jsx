@@ -207,7 +207,7 @@ const businessLinks = [
         title: 'DOCTORS',
         children: [
             {
-                title: 'All Hospitals',
+                title: 'All Doctors',
                 icon: doctorIcon,
                 link: '/business/doctor',
             },
