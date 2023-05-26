@@ -56,7 +56,6 @@ const Login = () => {
                                 <InputError message={errors.email} />
                                 <PasswordInput
                                     id="password"
-                                    type="password"
                                     name="password"
                                     value={data.password}
                                     onChange={(e) => setData('password', e.target.value)}

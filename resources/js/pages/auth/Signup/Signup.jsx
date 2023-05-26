@@ -55,7 +55,6 @@ const Signup = () => {
                                 <InputError message={errors.email} />
                                 <PasswordInput
                                     id="password"
-                                    type="password"
                                     name="password"
                                     value={data.password}
                                     placeHolder="Password"
