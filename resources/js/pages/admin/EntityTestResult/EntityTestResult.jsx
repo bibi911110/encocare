@@ -121,9 +121,9 @@ const TableMobileCard = ({ id, name, test, email, contact, date, time, address }
     );
 };
 
-const EntityTestResult = () => {
+const EntityTestResult = ({ auth }) => {
     return (
-        <AdminLayout>
+        <AdminLayout auth={auth}>
             <div className="entity-test-result">
                 <div className="main-header">
                     <span>{leftArrowIcon2}</span>Entity Test Results

@@ -90,9 +90,9 @@ const TableMobileCard = ({ id, test, group, address }) => {
     );
 };
 
-const DoctorDetail = () => {
+const DoctorDetail = ({ auth }) => {
     return (
-        <BusinessLayout>
+        <BusinessLayout auth={auth}>
             <div className="doctor-detail">
                 <div className="main-header">
                     <div className="title-wrapper">

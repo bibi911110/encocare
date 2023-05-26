@@ -4,9 +4,9 @@ import PasswordInput from '@/components/common/PasswordInput/PasswordInput';
 import { leftArrowIcon2, lockIcon } from '@/components/icons/common';
 import './BusinessSecuritySetting.scss';
 
-const BusinessSecuritySetting = () => {
+const BusinessSecuritySetting = ({ auth }) => {
     return (
-        <BusinessLayout>
+        <BusinessLayout auth={auth}>
             <div className="business-security-setting">
                 <div className="main-header">
                     <h1>

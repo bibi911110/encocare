@@ -3,12 +3,12 @@ import Navbar from '../../components/layout/Navbar/Navbar';
 import Sidebar from '../../components/layout/Sidebar/Sidebar';
 import './IndividualLayout.scss';
 
-const IndividualLayout = ({ children }) => {
+const IndividualLayout = ({ auth, children }) => {
     return (
         <>
             <header data-layout="individual">
                 <Header />
-                <Navbar mode="admin" />
+                <Navbar mode="admin" auth={auth} />
             </header>
             <main data-layout="individual">
                 <Sidebar type="individual" />

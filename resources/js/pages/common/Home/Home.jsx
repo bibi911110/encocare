@@ -21,9 +21,9 @@ import { eyeIcon1, eyeIcon2, eyeIcon3 } from '@/components/icons/eyes';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Home.scss';
 
-const Home = () => {
+const Home = ({ auth }) => {
     return (
-        <BasicLayout>
+        <BasicLayout auth={auth}>
             <div className="home">
                 <div className="main-section">
                     <div className="title-back">

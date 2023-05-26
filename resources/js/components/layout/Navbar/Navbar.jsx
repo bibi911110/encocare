@@ -45,7 +45,7 @@ const links = [
     },
 ];
 
-const Navbar = ({ mode }) => {
+const Navbar = ({ auth, mode }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [mobileSubMenuOpen, setMobileSubMenuOpen] = useState('');
 
@@ -87,7 +87,7 @@ const Navbar = ({ mode }) => {
                     </ul>
                 </div>
 
-                <NavbarAuth />
+                <NavbarAuth auth={auth} />
             </nav>
             {mobileMenuOpen && (
                 <div className="navbar-mobile">

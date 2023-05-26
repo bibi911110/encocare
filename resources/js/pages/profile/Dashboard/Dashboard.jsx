@@ -16,13 +16,13 @@ const data = {
     link: '/profile/test-history',
 };
 
-const Dashboard = () => {
+const Dashboard = ({ auth }) => {
     const handleTakeTest = () => {
         router.get('/test/agree');
     };
 
     return (
-        <ProfileLayout>
+        <ProfileLayout auth={auth}>
             <div className="profile-dashboard">
                 <div className="dashboard-header">
                     <div className="title-wrapper">

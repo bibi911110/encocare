@@ -4,7 +4,7 @@ import PaymentStep2 from './PaymentStep2';
 import './Donate.scss';
 import BasicLayout from '@/layout/BasicLayout/BasicLayout';
 
-const Donate = () => {
+const Donate = ({ auth }) => {
     const [paymentStep, setPaymentStep] = useState(0);
 
     const handleNextPaymentStep = () => {
@@ -16,7 +16,7 @@ const Donate = () => {
     };
 
     return (
-        <BasicLayout>
+        <BasicLayout auth={auth}>
             <div className="donate">
                 <div className="main-section">
                     <h1>Donate for a Vision</h1>

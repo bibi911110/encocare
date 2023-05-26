@@ -24,8 +24,7 @@ const links = [
     },
 ];
 
-const NavbarAuth = () => {
-    const isAuthorized = false;
+const NavbarAuth = ({ auth }) => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const profileRef = useRef(null);
 
@@ -43,12 +42,12 @@ const NavbarAuth = () => {
         };
     }, [profileRef]);
 
-    if (isAuthorized) {
+    if (auth && auth.user) {
         return (
             <div className="navbar-auth-profile" ref={profileRef}>
                 <div className="profile-wrapper" onClick={() => setDropdownOpen(!isDropdownOpen)}>
                     <div className="profile-info">
-                        <p className="email">salman.altaf@hotmail.com</p>
+                        <p className="email">{auth.user.email}</p>
                         <p className="account-id">
                             Account ID: <span>1236456789</span>
                         </p>
@@ -69,10 +68,12 @@ const NavbarAuth = () => {
                     {links.map((item) => {
                         if (item.title === 'Logout') {
                             return (
-                                <div key={item.title} className="dropdown-item" onClick={() => setDropdownOpen(false)}>
-                                    <span>{item.icon}</span>
-                                    {item.title}
-                                </div>
+                                <Link key={item.title} href={item.link} method="post">
+                                    <div className="dropdown-item" onClick={() => setDropdownOpen(false)}>
+                                        <span>{item.icon}</span>
+                                        {item.title}
+                                    </div>
+                                </Link>
                             );
                         } else {
                             return (

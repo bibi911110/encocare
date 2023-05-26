@@ -4,9 +4,9 @@ import TestReport from '@/components/common/TestReport/TestReport';
 import { pdfIcon, rightArrowIcon, shareIcon } from '@/components/icons/common';
 import './TestHistory.scss';
 
-const TestHistory = () => {
+const TestHistory = ({ auth }) => {
     return (
-        <ProfileLayout>
+        <ProfileLayout auth={auth}>
             <div className="profile-test-history">
                 <div className="breadcrumb">
                     <span>Dashboard</span>

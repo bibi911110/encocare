@@ -4,12 +4,12 @@ import Navbar from '@/components/layout/Navbar/Navbar';
 import BottomDialog from '@/components/common/BottomDialog/BottomDialog';
 import './BasicLayout.scss';
 
-const BasicLayout = ({ children }) => {
+const BasicLayout = ({ auth, children }) => {
     return (
         <>
             <header data-layout="base">
                 <Header />
-                <Navbar mode="user" />
+                <Navbar mode="user" auth={auth} />
             </header>
             <main data-layout="base">{children}</main>
             <BottomDialog />

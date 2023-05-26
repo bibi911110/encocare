@@ -3,12 +3,12 @@ import Navbar from '@/components/layout/Navbar/Navbar';
 import Sidebar from '@/components/layout/Sidebar/Sidebar';
 import './AdminLayout.scss';
 
-const AdminLayout = ({ children }) => {
+const AdminLayout = ({ auth, children }) => {
     return (
         <>
             <header data-layout="admin">
                 <Header />
-                <Navbar mode="admin" />
+                <Navbar mode="admin" auth={auth} />
             </header>
             <main data-layout="admin">
                 <Sidebar type="admin" />

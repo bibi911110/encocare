@@ -4,9 +4,9 @@ import Button from '@/components/common/Button/Button';
 import CheckBox from '@/components/common/CheckBox/CheckBox';
 import './TestAgree.scss';
 
-const TestAgree = () => {
+const TestAgree = ({ auth }) => {
     return (
-        <TestLayout>
+        <TestLayout auth={auth}>
             <div className="test-agree">
                 <h1>Before you take the test!</h1>
                 <p>

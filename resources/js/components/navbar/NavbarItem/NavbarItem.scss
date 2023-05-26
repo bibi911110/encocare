@@ -30,6 +30,26 @@
         stroke: white;
     }
 
+    &.main-menu {
+        padding: 0;
+
+        & > a {
+            padding: 0 36px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            @include devices(display) {
+                padding: 0 22px;
+            }
+
+            @include devices(desktop) {
+                padding: 0 10px;
+            }
+        }
+    }
+
     svg {
         margin-left: 18px;
         width: 12px;
@@ -47,9 +67,16 @@
         & > li {
             display: flex;
             align-items: center;
-            padding: 0 36px;
             height: 54px;
             white-space: nowrap;
+
+            & > a {
+                padding: 0 36px;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
 
             &:hover {
                 background-color: $primaryColor;

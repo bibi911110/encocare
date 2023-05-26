@@ -1,4 +1,4 @@
-import { Link } from '@inertiajs/react';
+import { Link, Head, useForm } from '@inertiajs/react';
 import BasicLayout from '@/layout/BasicLayout/BasicLayout';
 import Button from '@/components/common/Button/Button';
 import FormDivider from '@/components/common/FormDivider/FormDivider';
@@ -6,10 +6,29 @@ import NormalInput from '@/components/common/NormalInput/NormalInput';
 import PasswordInput from '@/components/common/PasswordInput/PasswordInput';
 import SocialButton from '@/components/common/SocialButton/SocialButton';
 import './Signup.scss';
+import InputError from '@/components/common/InputError/InputError';
 
 const Signup = () => {
+    const { data, setData, post, processing, errors, reset } = useForm({
+        email: '',
+        password: '',
+    });
+
+    useEffect(() => {
+        return () => {
+            reset('password');
+        };
+    }, []);
+
+    const submit = (e) => {
+        e.preventDefault();
+        post(route('signup'));
+    };
+
     return (
         <BasicLayout>
+            <Head title="Sign Up" />
+
             <div className="signup">
                 <div className="left-section">
                     <div className="form-wrapper">
@@ -21,12 +40,30 @@ const Signup = () => {
                             <SocialButton type="twitter" title="Sign up using Twitter" />
                         </div>
                         <FormDivider />
-                        <form>
+                        <form onSubmit={submit}>
                             <div className="input-wrapper">
-                                <NormalInput placeHolder="Email Address" />
-                                <PasswordInput placeHolder="Password" />
+                                <NormalInput
+                                    id="email"
+                                    type="email"
+                                    name="email"
+                                    value={data.email}
+                                    placeHolder="Email Address"
+                                    onChange={(e) => setData('email', e.target.value)}
+                                    required
+                                />
+                                <InputError message={errors.email} />
+                                <PasswordInput
+                                    id="password"
+                                    type="password"
+                                    name="password"
+                                    value={data.password}
+                                    placeHolder="Password"
+                                    onChange={(e) => setData('password', e.target.value)}
+                                    required
+                                />
+                                <InputError message={errors.password} />
                             </div>
-                            <Button title="Sign Up" type="primary" arrow />
+                            <Button title="Sign Up" type="primary" disabled={processing} submit arrow />
                         </form>
                         <div className="link-wrapper">
                             <p>Already a member?</p>

@@ -5,9 +5,9 @@ import NormalInput from '@/components/common/NormalInput/NormalInput';
 import img from '../../../../images/thankyou.png';
 import './Thanks.scss';
 
-const Thanks = () => {
+const Thanks = ({ auth }) => {
     return (
-        <BasicLayout>
+        <BasicLayout auth={auth}>
             <div className="thanks">
                 <img src={img} alt="" />
                 <h1>

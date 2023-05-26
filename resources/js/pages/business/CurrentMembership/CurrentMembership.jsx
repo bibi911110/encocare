@@ -6,13 +6,13 @@ import { cardIcon, checkCircleIcon, crossCircleIcon, leftArrowIcon2, planIcon } 
 import { plusCircleIcon } from '@/components/icons/sidebar';
 import './CurrentMembership.scss';
 
-const CurrentMembership = () => {
+const CurrentMembership = ({ auth }) => {
     const handleMembershipList = () => {
         router.get('/business/membership/list');
     };
 
     return (
-        <BusinessLayout>
+        <BusinessLayout auth={auth}>
             <div className="current-membership">
                 <div className="main-header">
                     <h1>

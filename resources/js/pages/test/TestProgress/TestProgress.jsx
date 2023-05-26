@@ -13,7 +13,7 @@ import Thankyou from '@/components/test/Thankyou/Thankyou';
 import './TestProgress.scss';
 import TestLayout from '@/layout/TestLayout/TestLayout';
 
-const TestProgress = () => {
+const TestProgress = ({ auth }) => {
     const [step, setStep] = useState(0);
 
     const steps = [
@@ -43,7 +43,7 @@ const TestProgress = () => {
     }
 
     return (
-        <TestLayout>
+        <TestLayout auth={auth}>
             <div className="eye-test">
                 <Stepper current={realStep} />
                 <div className="component-wrapper">{steps[step].component}</div>

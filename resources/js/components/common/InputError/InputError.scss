@@ -1,0 +1,13 @@
+@import '../../../../sass/mixins';
+
+.input-error {
+    color: #ea4335;
+    font-size: 13px;
+    margin-bottom: 8px;
+    text-align: left;
+    margin-top: -6px;
+
+    @include devices(tablet) {
+        font-size: 12px;
+    }
+}

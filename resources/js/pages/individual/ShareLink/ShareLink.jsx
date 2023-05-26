@@ -6,9 +6,9 @@ import linkImage1 from '../../../../images/link/1.png';
 import linkImage2 from '../../../../images/link/2.png';
 import './ShareLink.scss';
 
-const ShareLink = () => {
+const ShareLink = ({ auth }) => {
     return (
-        <IndividualLayout>
+        <IndividualLayout auth={auth}>
             <div className="share-link">
                 <div className="main-header">
                     <div className="title-wrapper">

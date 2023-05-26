@@ -137,9 +137,9 @@ const TableMobileCard = ({ id, type, name, contact, test, logo }) => {
     );
 };
 
-const AdminDashboard = () => {
+const AdminDashboard = ({ auth }) => {
     return (
-        <AdminLayout>
+        <AdminLayout auth={auth}>
             <div className="admin-dashboard">
                 <div className="main-header">
                     <Link href="/admin/entity/add">

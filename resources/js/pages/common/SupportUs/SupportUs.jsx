@@ -5,13 +5,13 @@ import SocialButton from '@/components/common/SocialButton/SocialButton';
 import logoEyeImage from '../../../../images/logo-eye.png';
 import './SupportUs.scss';
 
-const SupportUs = () => {
+const SupportUs = ({ auth }) => {
     const handleDonate = () => {
         router.get('/donate');
     };
 
     return (
-        <BasicLayout>
+        <BasicLayout auth={auth}>
             <div className="support-us">
                 <div className="left-section">
                     <div className="form-wrapper">

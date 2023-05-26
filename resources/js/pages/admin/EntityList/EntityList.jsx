@@ -123,9 +123,9 @@ const TableMobileCard = ({ id, name, date, type, address, admin, email, contact 
     );
 };
 
-const EntityList = () => {
+const EntityList = ({ auth }) => {
     return (
-        <AdminLayout>
+        <AdminLayout auth={auth}>
             <div className="entity-list">
                 <div className="main-header">
                     <div>

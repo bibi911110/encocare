@@ -15,7 +15,7 @@ import { leftArrowIcon2 } from '@/components/icons/common';
 import './Payment.scss';
 import ProfileLayout from '@/layout/ProfileLayout/ProfileLayout';
 
-const Payment = () => {
+const Payment = ({ auth }) => {
     const [step, setStep] = useState(0);
     const [payment, setPayment] = useState('card');
 
@@ -60,7 +60,7 @@ const Payment = () => {
     };
 
     return (
-        <ProfileLayout>
+        <ProfileLayout auth={auth}>
             <div className="profile-membership-payment">
                 <div className="main-section">
                     <h1>Select a payment method</h1>

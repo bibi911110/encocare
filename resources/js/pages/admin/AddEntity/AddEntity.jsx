@@ -10,9 +10,9 @@ import { imageIcon, leftArrowIcon2, lockIcon, userIcon } from '@/components/icon
 import { hospitalIcon } from '@/components/icons/sidebar';
 import './AddEntity.scss';
 
-const AddEntity = () => {
+const AddEntity = ({ auth }) => {
     return (
-        <AdminLayout>
+        <AdminLayout auth={auth}>
             <div className="add-entity">
                 <div className="main-header">
                     <h1>

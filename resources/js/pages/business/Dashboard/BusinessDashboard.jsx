@@ -172,9 +172,9 @@ const TableMobileCard = ({ id, name, address, test }) => {
     );
 };
 
-const BusinessDashboard = () => {
+const BusinessDashboard = ({ auth }) => {
     return (
-        <BusinessLayout>
+        <BusinessLayout auth={auth}>
             <div className="business-dashboard">
                 <div className="first-section">
                     <div className="card summary-card">

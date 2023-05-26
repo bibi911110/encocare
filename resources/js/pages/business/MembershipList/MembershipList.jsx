@@ -39,9 +39,9 @@ const membershipData = [
     },
 ];
 
-const MembershipList = () => {
+const MembershipList = ({ auth }) => {
     return (
-        <BusinessLayout>
+        <BusinessLayout auth={auth}>
             <div className="membership-list">
                 <div className="main-header">
                     <div className="title-wrapper">

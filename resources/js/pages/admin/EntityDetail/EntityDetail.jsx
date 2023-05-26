@@ -91,9 +91,9 @@ const TableMobileCard = ({ id, test, group, address }) => {
     );
 };
 
-const EntityDetail = () => {
+const EntityDetail = ({ auth }) => {
     return (
-        <AdminLayout>
+        <AdminLayout auth={auth}>
             <div className="entity-detail">
                 <div className="main-header">
                     <div className="title-wrapper">

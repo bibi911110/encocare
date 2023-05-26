@@ -4,9 +4,9 @@ import PasswordInput from '@/components/common/PasswordInput/PasswordInput';
 import { leftArrowIcon2, lockIcon } from '@/components/icons/common';
 import './IndividualSecuritySetting.scss';
 
-const IndividualSecuritySetting = () => {
+const IndividualSecuritySetting = ({ auth }) => {
     return (
-        <IndividualLayout>
+        <IndividualLayout auth={auth}>
             <div className="individual-security-setting">
                 <div className="main-header">
                     <div className="title-wrapper">

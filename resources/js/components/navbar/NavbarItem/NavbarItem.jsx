@@ -8,7 +8,7 @@ const NavbarItem = ({ title, link, subLinks }) => {
 
     if (link) {
         return (
-            <li className="navbar-menu-item">
+            <li className="navbar-menu-item main-menu">
                 <Link href={link}>{title}</Link>
             </li>
         );

@@ -134,9 +134,9 @@ const TableMobileCard = ({ id, test, name, email, date }) => {
     );
 };
 
-const IndividualDashboard = () => {
+const IndividualDashboard = ({ auth }) => {
     return (
-        <IndividualLayout>
+        <IndividualLayout auth={auth}>
             <div className="individual-dashboard">
                 <div className="main-header">
                     <Button title="&nbsp;&nbsp;Conduct a Test" type="primary" icon={plusCircleIcon} />

@@ -26,9 +26,9 @@ const roles = [
     },
 ];
 
-const AddTeamMember = () => {
+const AddTeamMember = ({ auth }) => {
     return (
-        <BusinessLayout>
+        <BusinessLayout auth={auth}>
             <div className="add-team-member">
                 <div className="main-header">
                     <h1>

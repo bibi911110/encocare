@@ -5,9 +5,9 @@ import successImage from '../../../../images/success2.png';
 import paymentMethodImage from '../../../../images/payments/method.png';
 import './PaymentSuccess.scss';
 
-const PaymentSuccess = () => {
+const PaymentSuccess = ({ auth }) => {
     return (
-        <ProfileLayout>
+        <ProfileLayout auth={auth}>
             <div className="payment-success">
                 <div className="payment-success-content">
                     <img src={successImage} alt="" />

@@ -4,12 +4,12 @@ import Profile from '../../components/layout/Profile/Profile';
 import BottomDialog from '../../components/common/BottomDialog/BottomDialog';
 import './ProfileLayout.scss';
 
-const ProfileLayout = ({ children }) => {
+const ProfileLayout = ({ auth, children }) => {
     return (
         <>
             <header data-layout="profile">
                 <Header />
-                <Navbar mode="user" />
+                <Navbar mode="user" auth={auth} />
             </header>
             <main data-layout="profile">
                 <Profile />

@@ -7,9 +7,9 @@ import { imageIcon, leftArrowIcon2, userIcon } from '@/components/icons/common';
 import { hospitalIcon } from '@/components/icons/sidebar';
 import './AddHospital.scss';
 
-const AddHospital = () => {
+const AddHospital = ({ auth }) => {
     return (
-        <BusinessLayout>
+        <BusinessLayout auth={auth}>
             <div className="add-hospital">
                 <div className="main-header">
                     <h1>

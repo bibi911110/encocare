@@ -125,9 +125,9 @@ const TableMobileCard = ({ id, name, address, admin, date, email, contact }) => 
     );
 };
 
-const DoctorList = () => {
+const DoctorList = ({ auth }) => {
     return (
-        <BusinessLayout>
+        <BusinessLayout auth={auth}>
             <div className="doctor-list">
                 <div className="main-header">
                     <div className="title-wrapper">
