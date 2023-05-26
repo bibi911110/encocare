@@ -12,8 +12,8 @@ const PasswordInput = ({ placeHolder, className, ...props }) => {
     };
 
     return (
-        <div className={passwordClassName} {...props}>
-            <input placeholder={placeHolder} type={isVisible ? 'text' : 'password'} />
+        <div className={passwordClassName}>
+            <input placeholder={placeHolder} type={isVisible ? 'text' : 'password'} {...props} />
             <span className="toggle-password" onClick={toggleVisible}>
                 {passwordShowIcon}
             </span>

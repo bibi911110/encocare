@@ -35,7 +35,7 @@ const Login = () => {
                                         <CheckBox />
                                         <span>Remember me</span>
                                     </div>
-                                    <Link href="/forget-password">Forgot Password?</Link>
+                                    <Link href="/forgot-password">Forgot Password?</Link>
                                 </div>
                             </div>
                             <Button title="Login" type="primary" onClick={handleLogin} arrow />

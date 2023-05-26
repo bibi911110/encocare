@@ -2,16 +2,16 @@ import { Link } from '@inertiajs/react';
 import BasicLayout from '@/layout/BasicLayout/BasicLayout';
 import Button from '@/components/common/Button/Button';
 import PasswordInput from '@/components/common/PasswordInput/PasswordInput';
-import setPasswordLogoImage from '../../../../images/set-password.png';
-import './SetPassword.scss';
+import resetPasswordLogoImage from '../../../../images/reset-password.png';
+import './ResetPassword.scss';
 
-const SetPassword = () => {
+const ResetPassword = () => {
     return (
         <BasicLayout>
-            <div className="set-password">
+            <div className="reset-password">
                 <div className="left-section">
                     <div className="form-wrapper">
-                        <img src={setPasswordLogoImage} alt="" />
+                        <img src={resetPasswordLogoImage} alt="" />
                         <h1>Set a new password!</h1>
                         <p>Use a password that's easy to remember yet difficult to guess!</p>
                         <form>
@@ -31,4 +31,4 @@ const SetPassword = () => {
     );
 };
 
-export default SetPassword;
+export default ResetPassword;

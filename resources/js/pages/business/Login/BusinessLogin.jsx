@@ -28,7 +28,7 @@ const BusinessLogin = () => {
                                     <CheckBox />
                                     <span>Remember me</span>
                                 </div>
-                                <Link href="/forget-password">Forgot Password?</Link>
+                                <Link href="/forgot-password">Forgot Password?</Link>
                             </div>
                             <Button title="Login" type="primary" onClick={handleLogin} arrow />
                         </form>

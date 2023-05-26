@@ -6,14 +6,11 @@
         "build": "vite build"
     },
     "devDependencies": {
-        "axios": "^1.1.2",
-        "laravel-vite-plugin": "^0.7.5",
-        "vite": "^4.0.0"
-    },
-    "dependencies": {
         "@inertiajs/inertia-react": "^0.8.1",
         "@inertiajs/react": "^1.0.7",
         "@vitejs/plugin-react": "^4.0.0",
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.7.5",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-dropzone": "^14.2.3",
@@ -22,6 +19,7 @@
         "react-responsive-carousel": "^3.2.23",
         "recharts": "^2.6.2",
         "sass": "^1.62.1",
-        "sass-loader": "^13.3.0"
+        "sass-loader": "^13.3.0",
+        "vite": "^4.0.0"
     }
 }

@@ -44,12 +44,12 @@ Route::get('/signup-business', function () {
     return Inertia::render('business/Signup/BusinessSignup');
 });
 
-Route::get('/forget-password', function () {
-    return Inertia::render('common/ForgetPassword/ForgetPassword');
+Route::get('/forgot-password', function () {
+    return Inertia::render('common/ForgotPassword/ForgotPassword');
 });
 
-Route::get('/set-password', function () {
-    return Inertia::render('common/SetPassword/SetPassword');
+Route::get('/reset-password', function () {
+    return Inertia::render('common/ResetPassword/ResetPassword');
 });
 
 Route::get('/support-us', function () {
