@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link, Head, useForm } from '@inertiajs/react';
 import BasicLayout from '@/layout/BasicLayout/BasicLayout';
 import Button from '@/components/common/Button/Button';
