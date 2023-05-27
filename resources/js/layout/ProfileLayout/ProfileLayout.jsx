@@ -12,7 +12,7 @@ const ProfileLayout = ({ auth, children }) => {
                 <Navbar mode="user" auth={auth} />
             </header>
             <main data-layout="profile">
-                <Profile />
+                <Profile auth={auth} />
                 <div className="main-content">{children}</div>
             </main>
             <BottomDialog />

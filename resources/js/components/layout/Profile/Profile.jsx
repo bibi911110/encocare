@@ -18,7 +18,7 @@ const menu = [
     { title: 'Account Settings', icon: settingIcon, link: '/profile/setting' },
 ];
 
-const Profile = () => {
+const Profile = ({ auth }) => {
     const [isMobileOpen, setMobileOpen] = useState(false);
     const profileRef = useRef(null);
 
@@ -49,7 +49,7 @@ const Profile = () => {
                 <div className="front">
                     <img src={profileImage} alt="" />
                     <h1>User Name</h1>
-                    <p>salman95altaf@gmail.com</p>
+                    <p>{auth.user.email}</p>
 
                     <ul className="menu">
                         {menu.map((item) => {

@@ -59,7 +59,7 @@ const NavbarAuth = ({ auth }) => {
                     <div className="profile-mobile-detail">
                         <img src={avatarImage} alt="" />
                         <div className="profile-mobile-info">
-                            <p className="email">salman.altaf@hotmail.com</p>
+                            <p className="email">{auth.user.email}</p>
                             <p className="account-id">
                                 Account ID: <span>1236456789</span>
                             </p>

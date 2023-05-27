@@ -15,15 +15,15 @@ const TestComplete = ({ onNext, onPrev }) => {
 
                         <div className="result-info-card">
                             <div className="card-row">
-                                <div className="row-col" style={{ flex: 2 }}>
+                                <div className="row-col" >
                                     <p>Patient Name</p>
                                     <span>Salman Altaf</span>
                                 </div>
-                                <div className="row-col" style={{ flex: 1 }}>
+                                <div className="row-col">
                                     <p>Test ID</p>
                                     <span>1956486</span>
                                 </div>
-                                <div className="row-col" style={{ flex: 3 }}>
+                                <div className="row-col">
                                     <p>DOB</p>
                                     <span>Jan 5, 1995</span>
                                 </div>
