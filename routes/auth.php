@@ -50,14 +50,6 @@ Route::middleware('guest')->group(function () {
     Route::get('/signup-business', function () {
         return Inertia::render('auth/BusinessSignup/BusinessSignup');
     });
-
-    Route::get('/forgot-password', function () {
-        return Inertia::render('auth/ForgotPassword/ForgotPassword');
-    });
-
-    Route::get('/reset-password', function () {
-        return Inertia::render('auth/ResetPassword/ResetPassword');
-    });
 });
 
 Route::middleware('auth')->group(function () {
