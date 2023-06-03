@@ -14,7 +14,7 @@ use Illuminate\Validation\Rules;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class RegisteredUserController extends Controller
+class RegisterUserController extends Controller
 {
     /**
      * Display the registration view.
@@ -39,10 +39,14 @@ class RegisteredUserController extends Controller
         $user = User::create([
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'provider' => 'self',
+            'provider_id' => ''
         ]);
 
         event(new Registered($user));
 
-        return redirect('login');
+        Auth::login($user);
+
+        return redirect(RouteServiceProvider::HOME);
     }
 }

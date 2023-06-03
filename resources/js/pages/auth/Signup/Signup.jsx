@@ -35,7 +35,7 @@ const Signup = () => {
                     <div className="form-wrapper">
                         <h1>Sign Up</h1>
                         <p>Eyesight is a beautiful gift of life! Live it to the best!</p>
-                        <div className="social-buttons">
+                        <div className="social-buttons-wrapper">
                             <SocialButton type="facebook" title="Sign up using Facebook" />
                             <SocialButton type="google" title="Sign up using Google" />
                             <SocialButton type="twitter" title="Sign up using Twitter" />

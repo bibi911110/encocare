@@ -68,7 +68,7 @@ const NavbarAuth = ({ auth }) => {
                     {links.map((item) => {
                         if (item.title === 'Logout') {
                             return (
-                                <Link key={item.title} href={item.link} method="post">
+                                <Link key={item.title} href={item.link}>
                                     <div className="dropdown-item" onClick={() => setDropdownOpen(false)}>
                                         <span>{item.icon}</span>
                                         {item.title}

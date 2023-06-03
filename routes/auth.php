@@ -1,27 +1,28 @@
 <?php
 
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\LoginUserController;
 use App\Http\Controllers\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
-use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Auth\RegisterUserController;
+use App\Http\Controllers\Auth\SocialUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::middleware('guest')->group(function () {
-    Route::get('signup', [RegisteredUserController::class, 'create'])
+    Route::get('signup', [RegisterUserController::class, 'create'])
         ->name('signup');
 
-    Route::post('signup', [RegisteredUserController::class, 'store']);
+    Route::post('signup', [RegisterUserController::class, 'store']);
 
-    Route::get('login', [AuthenticatedSessionController::class, 'create'])
+    Route::get('login', [LoginUserController::class, 'create'])
         ->name('login');
 
-    Route::post('login', [AuthenticatedSessionController::class, 'store']);
+    Route::post('login', [LoginUserController::class, 'store']);
 
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
         ->name('password.request');
@@ -34,6 +35,14 @@ Route::middleware('guest')->group(function () {
 
     Route::post('reset-password', [NewPasswordController::class, 'store'])
         ->name('password.store');
+
+    Route::get('/login/{provider}', [SocialUserController::class, 'redirect'])
+        ->where('provider', '(google|facebook|twitter)')
+        ->name('login.social');
+
+    Route::get('/login/{provider}/callback', [LoginUserController::class, 'handleSocialProviderCallback'])
+        ->where('provider', '(google|facebook|twitter)')
+        ->name('login.social.callback');
 
     Route::get('/login-admin', function () {
         return Inertia::render('auth/AdminLogin/AdminLogin');
@@ -71,6 +80,6 @@ Route::middleware('auth')->group(function () {
 
     Route::put('password', [PasswordController::class, 'update'])->name('password.update');
 
-    Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
+    Route::get('logout', [LoginUserController::class, 'destroy'])
         ->name('logout');
 });

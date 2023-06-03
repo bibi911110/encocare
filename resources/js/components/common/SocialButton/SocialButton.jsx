@@ -1,7 +1,7 @@
 import { facebookButtonIcon, googleButtonIcon, twitterButtonIcon } from '@/components/icons/social';
 import './SocialButton.scss';
 
-const SocialButton = ({ type, title }) => {
+const SocialButton = ({ type, title, url }) => {
     let buttonClassName = `social-button social-${type}`;
     let buttonContent;
 
@@ -28,7 +28,11 @@ const SocialButton = ({ type, title }) => {
         );
     }
 
-    return <button className={buttonClassName}>{buttonContent}</button>;
+    return (
+        <a className="social-button" href={url}>
+            <button className={buttonClassName}>{buttonContent}</button>
+        </a>
+    );
 };
 
 export default SocialButton;

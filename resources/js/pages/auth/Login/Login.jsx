@@ -37,10 +37,10 @@ const Login = () => {
                     <div className="form-wrapper">
                         <h1>Login</h1>
                         <p>Login to the Africa's #1 Eye Testing Application</p>
-                        <div className="social-buttons">
-                            <SocialButton type="facebook" title="Login using Facebook" />
-                            <SocialButton type="google" title="Login using Google" />
-                            <SocialButton type="twitter" title="Login using Twitter" />
+                        <div className="social-button-wrapper">
+                            <SocialButton type="facebook" title="Login using Facebook" url="/login/facebook" />
+                            <SocialButton type="google" title="Login using Google" url="/login/google" />
+                            <SocialButton type="twitter" title="Login using Twitter" url="/login/twitter" />
                         </div>
                         <FormDivider />
                         <form onSubmit={submit}>
