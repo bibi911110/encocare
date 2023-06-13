@@ -1,12 +1,15 @@
-import { Head, Link, useForm } from '@inertiajs/react';
+import { useState } from 'react';
+import { Head, useForm } from '@inertiajs/react';
 import BasicLayout from '@/layout/BasicLayout/BasicLayout';
 import Button from '@/components/common/Button/Button';
 import NormalInput from '@/components/common/NormalInput/NormalInput';
 import InputError from '@/components/common/InputError/InputError';
+import CustomModal from '@/components/common/CustomModal/CustomModal';
 import forgotPasswordLogoImage from '../../../../images/forgot-password.png';
 import './ForgotPassword.scss';
 
 const ForgotPassword = ({ status }) => {
+    const [modalIsOpen, setModalIsOpen] = useState(true);
     const { data, setData, post, processing, errors } = useForm({
         email: '',
     });
@@ -16,7 +19,13 @@ const ForgotPassword = ({ status }) => {
         post(route('password.email'));
     };
 
-    console.log(status);
+    function openModal() {
+        setModalIsOpen(true);
+    }
+
+    function closeModal() {
+        setModalIsOpen(false);
+    }
 
     return (
         <BasicLayout>
@@ -46,6 +55,10 @@ const ForgotPassword = ({ status }) => {
                 </div>
                 <div className="right-section"></div>
             </div>
+
+            <CustomModal isOpen={modalIsOpen} closeModal={closeModal}>
+                <span>This is modal title</span>
+            </CustomModal>
         </BasicLayout>
     );
 };

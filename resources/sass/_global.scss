@@ -67,3 +67,24 @@
         display: inherit;
     }
 }
+
+// react-modal
+.ReactModal__Overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: unset !important;
+    z-index: 10000;
+}
+
+.ReactModal__Content {
+    inset: unset !important;
+    border: unset !important;
+    border-radius: unset !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 16px !important;
+}
+
+.modal-open {
+    overflow: hidden;
+}

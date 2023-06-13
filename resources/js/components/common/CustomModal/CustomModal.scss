@@ -1,0 +1,13 @@
+@import '../../../../sass/variables';
+@import '../../../../sass/mixins';
+
+.custom-modal {
+    position: relative;
+
+    .close-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+}

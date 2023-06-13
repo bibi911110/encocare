@@ -12,8 +12,8 @@ const BasicLayout = ({ auth, children }) => {
                 <Navbar mode="user" auth={auth} />
             </header>
             <main data-layout="base">{children}</main>
-            <BottomDialog />
             <Footer />
+            <BottomDialog />
         </>
     );
 };

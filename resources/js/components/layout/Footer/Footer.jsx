@@ -1,6 +1,6 @@
 import { Link } from '@inertiajs/react';
-import NormalInput from '../../common/NormalInput/NormalInput';
-import Button from '../../common/Button/Button';
+import NormalInput from '@/components/common/NormalInput/NormalInput';
+import Button from '@/components/common/Button/Button';
 import { copyrightIcon, phoneIcon } from '@/components/icons/common';
 import { facebookIcon, instagramIcon, linkedinIcon, twitterIcon } from '@/components/icons/social';
 import logoImage from '../../../../images/logo.png';
@@ -86,7 +86,7 @@ const Footer = () => {
                     </p>
                     <div className="email-input-section">
                         <NormalInput placeHolder="Email Address" />
-                        <Button title="Subscribe" type="primary" arrow />
+                        <Button title="Subscribe&nbsp;&nbsp;&nbsp;" type="primary" arrow />
                     </div>
                 </div>
             </div>

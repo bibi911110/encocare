@@ -39,7 +39,7 @@ class RegisterUserController extends Controller
         $user = User::create([
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'provider' => 'self',
+            'provider' => 'encocare',
             'provider_id' => ''
         ]);
 
