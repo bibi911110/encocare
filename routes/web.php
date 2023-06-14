@@ -41,7 +41,7 @@ require __DIR__ . '/auth.php';
 Route::prefix('profile')->middleware('auth')->group(function () {
     Route::get('dashboard', function () {
         return Inertia::render('profile/Dashboard/Dashboard');
-    });
+    })->name('profile.dashboard');
 
     Route::get('test-history', function () {
         return Inertia::render('profile/TestHistory/TestHistory');

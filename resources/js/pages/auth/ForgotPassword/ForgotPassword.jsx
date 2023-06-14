@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Head, useForm } from '@inertiajs/react';
+import { Head, useForm, Link } from '@inertiajs/react';
 import BasicLayout from '@/layout/BasicLayout/BasicLayout';
+import CheckBox from '@/components/common/CheckBox/CheckBox';
 import Button from '@/components/common/Button/Button';
 import NormalInput from '@/components/common/NormalInput/NormalInput';
 import InputError from '@/components/common/InputError/InputError';
@@ -9,7 +10,7 @@ import forgotPasswordLogoImage from '../../../../images/forgot-password.png';
 import './ForgotPassword.scss';
 
 const ForgotPassword = ({ status }) => {
-    const [modalIsOpen, setModalIsOpen] = useState(true);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
     const { data, setData, post, processing, errors } = useForm({
         email: '',
     });
@@ -26,6 +27,8 @@ const ForgotPassword = ({ status }) => {
     function closeModal() {
         setModalIsOpen(false);
     }
+
+    console.log(status);
 
     return (
         <BasicLayout>
@@ -57,7 +60,80 @@ const ForgotPassword = ({ status }) => {
             </div>
 
             <CustomModal isOpen={modalIsOpen} closeModal={closeModal}>
-                <span>This is modal title</span>
+                <div className="agree-modal-container">
+                    <h1>Please indicate your consent!</h1>
+                    <div className="agree-wrapper">
+                        <div className="agree-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                <br />
+                                <br />
+                                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                                sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                <br />
+                                <br />
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                sanctus est Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                labore et dolore magna aliquyam erat, sed diam voluptua.
+                                <br />
+                                <br />
+                                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                                sea takimata sanctus est Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet,
+                                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                amet.
+                                <br />
+                                <br />
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                <br />
+                                <br />
+                                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                                sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                <br />
+                                <br />
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                                sanctus est Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                labore et dolore magna aliquyam erat, sed diam voluptua.
+                                <br />
+                                <br />
+                                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                                sea takimata sanctus est Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet,
+                                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                amet.
+                            </p>
+                        </div>
+
+                        <div className="agree-check">
+                            <CheckBox />
+                            <p>I agree to the terms & conditions and privacy policy of Encocare.</p>
+                        </div>
+
+                        <div className="button-wrapper">
+                            <Button title="Agree & Continue" type="primary" onClick={closeModal} arrow />
+                        </div>
+                        <p>
+                            For more details please, read your <br className="mobile-only" />
+                            <span>terms & conditions</span> and <span>privacy policy</span>.
+                        </p>
+                    </div>
+                </div>
             </CustomModal>
         </BasicLayout>
     );
