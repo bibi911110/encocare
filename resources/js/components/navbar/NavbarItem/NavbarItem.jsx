@@ -19,7 +19,7 @@ const NavbarItem = ({ title, link, subLinks }) => {
                 onMouseEnter={() => setSubMenuOpen(true)}
                 onMouseLeave={() => setSubMenuOpen(false)}
             >
-                {title}
+                <span>{title}</span>
                 {downArrowIcon}
                 {isSubMenuOpen && (
                     <ul className="sub-menu">

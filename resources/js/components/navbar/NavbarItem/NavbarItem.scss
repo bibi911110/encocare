@@ -50,7 +50,15 @@
         }
     }
 
-    svg {
+    & > span {
+        @include devices(desktop) {
+            width: 100px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
+    & > svg {
         margin-left: 18px;
         width: 12px;
         height: 7px;
