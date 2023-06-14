@@ -28,8 +28,6 @@ const ForgotPassword = ({ status }) => {
         setModalIsOpen(false);
     }
 
-    console.log(status);
-
     return (
         <BasicLayout>
             <Head title="Forgot Password" />
@@ -51,6 +49,7 @@ const ForgotPassword = ({ status }) => {
                                     placeHolder="Email Address"
                                 />
                                 <InputError message={errors.email} />
+                                { status && <p className="success-message">{status}</p> }
                             </div>
                             <Button title="Get magic link" type="primary" disabled={processing} submit arrow />
                         </form>
