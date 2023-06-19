@@ -15,7 +15,7 @@ const TestComplete = ({ onNext, onPrev }) => {
 
                         <div className="result-info-card">
                             <div className="card-row">
-                                <div className="row-col" >
+                                <div className="row-col">
                                     <p>Patient Name</p>
                                     <span>Salman Altaf</span>
                                 </div>
