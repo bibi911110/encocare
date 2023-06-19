@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Head, useForm, Link } from '@inertiajs/react';
+import { Head, useForm } from '@inertiajs/react';
 import BasicLayout from '@/layout/BasicLayout/BasicLayout';
 import CheckBox from '@/components/common/CheckBox/CheckBox';
 import Button from '@/components/common/Button/Button';
@@ -49,7 +49,7 @@ const ForgotPassword = ({ status }) => {
                                     placeHolder="Email Address"
                                 />
                                 <InputError message={errors.email} />
-                                { status && <p className="success-message">{status}</p> }
+                                {status && <p className="success-message">{status}</p>}
                             </div>
                             <Button title="Get magic link" type="primary" disabled={processing} submit arrow />
                         </form>
