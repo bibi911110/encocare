@@ -1,11 +1,11 @@
 import { Link, router } from '@inertiajs/react';
+import BasicLayout from '@/layout/BasicLayout/BasicLayout';
 import CheckBox from '@/components/common/CheckBox/CheckBox';
 import Button from '@/components/common/Button/Button';
 import NormalInput from '@/components/common/NormalInput/NormalInput';
 import PasswordInput from '@/components/common/PasswordInput/PasswordInput';
 import { rightArrowIcon2 } from '@/components/icons/common';
 import './AdminLogin.scss';
-import BasicLayout from '@/layout/BasicLayout/BasicLayout';
 
 const AdminLogin = () => {
     const handleLogin = () => {
